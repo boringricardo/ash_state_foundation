@@ -1,0 +1,9 @@
+stateDiagram-v2
+pending --> running: initialize
+running --> stopped: pause
+stopped --> running: resume
+stopped --> deleted: destroy
+stopped --> error: error
+running --> deleted: destroy
+running --> error: error
+pending --> error: error
